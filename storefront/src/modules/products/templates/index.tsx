@@ -38,9 +38,9 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
         </div>
         <div className="flex flex-col ">
           <ProductInfo product={product} />
-          <ProductDescr product={product} />
+          
           <div className="flex flex-col gap-y-6">
-            <ProductTabs product={product} />
+            
             <Suspense
               fallback={
                 <ProductActions
@@ -54,6 +54,7 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
             </Suspense>
             <ProductOnboardingCta />
             <ProductDescr product={product} />
+            <ProductTabs product={product} />
           </div>
         </div>
       </div>
@@ -64,7 +65,8 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
         <Suspense fallback={<SkeletonRelatedProducts />}>
           <RelatedProducts product={product} countryCode={countryCode} />
         </Suspense>
-        <ProductDescr product={product} />
+        
+        
       </div>
     </>
   )
